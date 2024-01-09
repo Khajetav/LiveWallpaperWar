@@ -832,17 +832,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 71810515}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &439082900 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6764573368177417998, guid: f59602019462b5f4db5ebdbfee34609f, type: 3}
-  m_PrefabInstance: {fileID: 1435047481}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25d0f41d86eed0b49b569baf06883be1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2466,18 +2455,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1628199599435024075, guid: f59602019462b5f4db5ebdbfee34609f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1628199599435024075, guid: f59602019462b5f4db5ebdbfee34609f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1628199599435024075, guid: f59602019462b5f4db5ebdbfee34609f, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1628199599435024075, guid: f59602019462b5f4db5ebdbfee34609f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.1900005
       objectReference: {fileID: 0}
@@ -2525,79 +2502,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Soldier
       objectReference: {fileID: 0}
-    - target: {fileID: 5400322747843893886, guid: f59602019462b5f4db5ebdbfee34609f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5400322747843893886, guid: f59602019462b5f4db5ebdbfee34609f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5400322747843893886, guid: f59602019462b5f4db5ebdbfee34609f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5400322747843893886, guid: f59602019462b5f4db5ebdbfee34609f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5400322747843893886, guid: f59602019462b5f4db5ebdbfee34609f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5400322747843893886, guid: f59602019462b5f4db5ebdbfee34609f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 5400322747843893886, guid: f59602019462b5f4db5ebdbfee34609f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6764573368177417998, guid: f59602019462b5f4db5ebdbfee34609f, type: 3}
-      propertyPath: movementSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6764573368177417998, guid: f59602019462b5f4db5ebdbfee34609f, type: 3}
-      propertyPath: rotationSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9141294034406245318, guid: f59602019462b5f4db5ebdbfee34609f, type: 3}
-      propertyPath: OnCollision.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9141294034406245318, guid: f59602019462b5f4db5ebdbfee34609f, type: 3}
-      propertyPath: OnCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9141294034406245318, guid: f59602019462b5f4db5ebdbfee34609f, type: 3}
-      propertyPath: OnCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 439082900}
-    - target: {fileID: 9141294034406245318, guid: f59602019462b5f4db5ebdbfee34609f, type: 3}
-      propertyPath: OnCollision.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9141294034406245318, guid: f59602019462b5f4db5ebdbfee34609f, type: 3}
-      propertyPath: OnCollision.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadNextNode
-      objectReference: {fileID: 0}
-    - target: {fileID: 9141294034406245318, guid: f59602019462b5f4db5ebdbfee34609f, type: 3}
-      propertyPath: OnCollision.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Movement, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 9141294034406245318, guid: f59602019462b5f4db5ebdbfee34609f, type: 3}
-      propertyPath: OnCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5424066296401759163, guid: f59602019462b5f4db5ebdbfee34609f, type: 3}
-    - {fileID: 4458965781325151615, guid: f59602019462b5f4db5ebdbfee34609f, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8227902957469028372, guid: f59602019462b5f4db5ebdbfee34609f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1932346896}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f59602019462b5f4db5ebdbfee34609f, type: 3}
 --- !u!1 &1466351383
 GameObject:
@@ -4013,26 +3921,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929349408}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1932346894 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8227902957469028372, guid: f59602019462b5f4db5ebdbfee34609f, type: 3}
-  m_PrefabInstance: {fileID: 1435047481}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1932346896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1932346894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3a5f3238cb99564a997110f71663dc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  upperSpotAngleRange: 45
-  lowerSpotAngleRange: 30
-  swaySpeed: 10
 --- !u!1 &1998101322
 GameObject:
   m_ObjectHideFlags: 0
