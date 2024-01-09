@@ -18,7 +18,6 @@ public class OnTouchTrigger : MonoBehaviour
             // Convert the screen position to world position
             Vector3 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
 
-            Debug.Log(worldPosition);
             // Pass the position to the DroppingTheBomb method
             newObject.GetComponent<BombBehaviour>().DroppingTheBomb(worldPosition);
         }
