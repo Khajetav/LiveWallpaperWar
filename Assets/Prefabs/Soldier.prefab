@@ -179,8 +179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e387fcfe48c0e14baa5e28653f1cf8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementNodeManager: {fileID: 2299660992561345632}
-  tagToCheck: Soldier
 --- !u!1 &8227902957469028372
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,7 +205,7 @@ Transform:
   m_GameObject: {fileID: 8227902957469028372}
   serializedVersion: 2
   m_LocalRotation: {x: 0.12035624, y: 0.69678867, z: -0.12035624, w: 0.69678867}
-  m_LocalPosition: {x: 0, y: 0, z: -0.1321185}
+  m_LocalPosition: {x: -1.97, y: 0.7, z: -0.1321185}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -223,15 +221,15 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 40
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_Color: {r: 1, g: 0.9822683, b: 0.8160377, a: 1}
+  m_Intensity: 10
+  m_Range: 2
+  m_SpotAngle: 40
+  m_InnerSpotAngle: 4
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
-    m_Resolution: -1
+    m_Resolution: 0
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0
@@ -258,7 +256,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
