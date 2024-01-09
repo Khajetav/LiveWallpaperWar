@@ -3,11 +3,18 @@ using UnityEngine.UI;
 
 public class SimpleScrolling : MonoBehaviour
 {
-    [SerializeField] private RawImage scrollingObjectImage;
-    public float scrollingSpeed;
+    public float scrollXSpeed = 0.1f;
+    public float scrollYSpeed = 0.1f;
+    private MeshRenderer meshRenderer;
+
+    void Start()
+    {
+        meshRenderer = GetComponent<MeshRenderer>();
+    }
 
     void Update()
     {
-        scrollingObjectImage.uvRect = new Rect(scrollingObjectImage.uvRect.position + new Vector2(scrollingSpeed, scrollingSpeed/5) * Time.deltaTime, scrollingObjectImage.uvRect.size);
+        meshRenderer.material.mainTextureOffset = new Vector2(Time.realtimeSinceStartup * scrollXSpeed, Time.realtimeSinceStartup * scrollYSpeed);
     }
+
 }

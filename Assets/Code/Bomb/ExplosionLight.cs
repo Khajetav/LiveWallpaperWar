@@ -21,7 +21,7 @@ public class ExplosionLight : MonoBehaviour
         lightComp.renderMode = LightRenderMode.ForcePixel;
         lightComp.range = 0f;
         lightComp.intensity = 0f;
-        lightComp.shadows = LightShadows.Hard;
+        lightComp.shadows = LightShadows.Soft;
         lightComp.shadowBias = 0f;  
         lightComp.shadowNormalBias = 0.4f;  
         lightComp.shadowNearPlane = 0.2f;
