@@ -9,13 +9,14 @@ public class GetAllMovementNodes : MonoBehaviour
     // tankNodeParent would show the movement nodes for tanks and etc
     [SerializeField] GameObject nodeParent;
     public List<GameObject> movementNodes { get; private set; }
-    void Start()
+    public void LoadAllNodes()
     {
         movementNodes = new List<GameObject>();
         if (nodeParent != null)
         {
             foreach (Transform child in nodeParent.transform)
             {
+                Debug.Log("Node added " + child.name);
                 movementNodes.Add(child.gameObject);
             }
         }

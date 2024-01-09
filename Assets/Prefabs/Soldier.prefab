@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4458965781325151615}
   - component: {fileID: 2299660992561345632}
   - component: {fileID: 9141294034406245318}
+  - component: {fileID: 6764573368177417998}
   m_Layer: 0
   m_Name: Soldier
   m_TagString: Untagged
@@ -179,8 +180,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e387fcfe48c0e14baa5e28653f1cf8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementNodeManager: {fileID: 2299660992561345632}
-  tagToCheck: Soldier
+  nodeTag: NodeSoldier
+--- !u!114 &6764573368177417998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3356694333035859636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25d0f41d86eed0b49b569baf06883be1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 5
+  rotationSpeed: 5
 --- !u!1 &8227902957469028372
 GameObject:
   m_ObjectHideFlags: 0
