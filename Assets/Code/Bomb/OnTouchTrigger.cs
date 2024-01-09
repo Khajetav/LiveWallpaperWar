@@ -3,7 +3,7 @@ using UnityEngine;
 public class OnTouchTrigger : MonoBehaviour
 {
     public GameObject objectToDrop;
-
+    public GameObject LightExplosionObject;
     void Update()
     {
         // Check if the screen is touched

@@ -1,7 +1,5 @@
 using System.Collections;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class Movement : MonoBehaviour
 {
@@ -19,28 +17,22 @@ public class Movement : MonoBehaviour
 
     public void LoadNextNode()
     {
-        Debug.Log("Loading next node, current index: " + nodeIndex);
         nodeIndex++;
         if (nodeIndex != movementNodeManager.movementNodes.Count)
         {
-            Debug.Log("If passed");
             currentNode = movementNodeManager.movementNodes[nodeIndex];
-            Debug.Log("nodeIndex: " + nodeIndex);
             if (movementCoroutine != null)
                 StopCoroutine(movementCoroutine);
-            Debug.Log("Starting coroutine");
             movementCoroutine = StartCoroutine(MoveTowardsNode());
         }
         else
         {
-            Debug.Log("Shooting the soldier");
             Destroy(gameObject);
         }
     }
     void Start()
     {
         // Grab the first node from the movementNodeManager's movementNodes list
-        Debug.Log("Count: " + movementNodeManager.movementNodes.Count);
         if (movementNodeManager.movementNodes.Count > 0)
         {
             currentNode = movementNodeManager.movementNodes[0];
@@ -48,7 +40,6 @@ public class Movement : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("No movement nodes are available.");
         }
     }
 
@@ -61,8 +52,6 @@ public class Movement : MonoBehaviour
 
         Vector3 targetDirection = targetPosition - startPosition;
         float targetAngle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg - 90;
-
-        Debug.Log("Starting coroutine, currentNode name: " + currentNode.name);
 
         while (Vector3.Distance(cachedTransform.position, targetPosition) > 0.1f)
         {
