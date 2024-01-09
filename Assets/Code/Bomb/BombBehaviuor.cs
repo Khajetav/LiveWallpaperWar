@@ -21,7 +21,7 @@ public class BombBehaviour : MonoBehaviour
 
     private IEnumerator DroppingToTheGround()
     {
-        float speed = 5.0f;
+        float speed = 2.0f;
         // Continue the loop until the z position is approximately 0 and scale is close to 0
         while (Mathf.Abs(transform.position.z) > 0.001f)
         {
@@ -40,6 +40,7 @@ public class BombBehaviour : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Debug.Log(other.gameObject.name);
+            //Destroy(other.gameObject);
         }
     }
 }

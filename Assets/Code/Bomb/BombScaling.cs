@@ -12,7 +12,7 @@ public class BombScaling : MonoBehaviour
     private IEnumerator ScaleDownCoroutine()
     {
 
-        float scaleSpeed = 2f; // Speed of scaling down per second
+        float scaleSpeed = 0.7f; // Speed of scaling down per second
 
         while (transform.localScale.magnitude > 0.1f) // Check if scale is close to zero
         {
