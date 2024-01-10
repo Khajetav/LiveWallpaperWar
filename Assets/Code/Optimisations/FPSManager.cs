@@ -5,17 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class FPSManager : MonoBehaviour
 {
-    //public int targetFps = 30;
+    public int targetFps = 24;
     private void Start()
     {
-        string currentScene = SceneManager.GetActiveScene().ToString();
-        if (currentScene != "Animated")
-        {
-            Application.targetFrameRate = PlayerPrefs.GetInt("menuFPS", 60);
-        }
-        if (currentScene == "Animated")
-        {
-            Application.targetFrameRate = PlayerPrefs.GetInt("wallpaperFPS", 10);
-        }
+        Application.targetFrameRate = 24;
     }
 }
