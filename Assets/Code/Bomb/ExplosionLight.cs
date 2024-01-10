@@ -8,24 +8,21 @@ public class ExplosionLight : MonoBehaviour
     public void CreateAnExplosion(Vector3 explosionPosition)
     {
         Debug.Log("Invoked");
-        // Create a new GameObject
         GameObject lightGameObject = new GameObject("LightExplosion");
         explosionPosition.z = bombExplosionHeight;
         lightGameObject.transform.position = explosionPosition;
-
-        // Add the Light component
         Light lightComp = lightGameObject.AddComponent<Light>();
 
-        // Set the light to be a point light
+
         lightComp.type = LightType.Point;
-        lightComp.renderMode = LightRenderMode.ForcePixel;
+        lightComp.renderMode = LightRenderMode.Auto;
         lightComp.range = 0f;
         lightComp.intensity = 0f;
         lightComp.shadows = LightShadows.Hard;
         lightComp.shadowBias = 0f;  
         lightComp.shadowNormalBias = 0.4f;  
         lightComp.shadowNearPlane = 0.2f;
-        // Set light color to FFE1B9
+
         Color lightColor;
         if (ColorUtility.TryParseHtmlString("#FFE1B9", out lightColor))
         {
@@ -35,8 +32,6 @@ public class ExplosionLight : MonoBehaviour
         {
             Debug.LogError("Invalid color code");
         }
-
-        // Start the coroutine to handle light animation
         StartCoroutine(AnimateExplosionStart(lightComp));
     }
 
@@ -48,12 +43,12 @@ public class ExplosionLight : MonoBehaviour
         while (currentTime < duration)
         {
             Debug.Log(light.range);
-            light.range = Mathf.Lerp(0, 10, currentTime / duration);
-            light.intensity = Mathf.Lerp(0, 100, currentTime / duration);
+            light.range = Mathf.Lerp(0, 5, currentTime / duration);
+            light.intensity = Mathf.Lerp(0, 40, currentTime / duration);
             currentTime += Time.deltaTime;
             yield return null;
         }
-        light.range = 10f;
+        light.range = 5f;
         StartCoroutine(AnimateExplosionEnd(light));
     }
     private IEnumerator AnimateExplosionEnd(Light light)
@@ -63,37 +58,14 @@ public class ExplosionLight : MonoBehaviour
         float currentTime = 0f;
         while (currentTime < duration)
         {
-            light.range = Mathf.Lerp(10, 0, currentTime / duration);
-            light.intensity = Mathf.Lerp(100, 0, currentTime / duration);
+            light.range = Mathf.Lerp(5, 0, currentTime / duration);
+            light.intensity = Mathf.Lerp(40, 0, currentTime / duration);
             currentTime += Time.deltaTime;
             yield return null;
         }
         light.range = 0f;
         light.intensity = 0f;
 
-        // Turn off light and destroy its GameObject
         Destroy(light.gameObject);
     }
-
-    /*
-    private IEnumerator AnimateLight(Light light)
-    {
-
-
-        // Decrease range and intensity over 2 seconds
-        duration = 2f;
-        timer = 0;
-        while (timer <= duration)
-        {
-            light.range = Mathf.Lerp(10, 0, timer / duration);
-            light.intensity = Mathf.Lerp(100, 0, timer / duration);
-            timer += Time.deltaTime;
-            yield return null;
-        }
-
-        // Turn off light and destroy its GameObject
-        light.gameObject.SetActive(false);
-        Destroy(light.gameObject);
-    }
-    */
 }
