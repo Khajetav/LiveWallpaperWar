@@ -4,7 +4,6 @@ using UnityEngine.Events;
 
 public class BombBehaviour : MonoBehaviour
 {
-    private bool hasCollided = false;
     public UnityEvent<Vector3> OnExplosion;
     void Start()
     {
@@ -41,6 +40,7 @@ public class BombBehaviour : MonoBehaviour
 
     private IEnumerator DroppingToTheGround()
     {
+        // Debug.Log("BOOOOOOOOMB!!!!!");
         float speed = 5.0f;
         Vector3 newPosition = transform.position;
         // Continue the loop until the z position is approximately 0 and scale is close to 0
@@ -57,12 +57,12 @@ public class BombBehaviour : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log(other.gameObject.name);
-            //Destroy(other.gameObject);
+            // Debug.Log(other.gameObject.name);
+            Destroy(other.gameObject);
         }
     }
 }

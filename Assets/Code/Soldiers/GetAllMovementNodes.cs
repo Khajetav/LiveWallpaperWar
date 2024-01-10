@@ -16,7 +16,7 @@ public class GetAllMovementNodes : MonoBehaviour
         {
             foreach (Transform child in nodeParent.transform)
             {
-                Debug.Log("Node added " + child.name);
+                // Debug.Log("Node added " + child.name);
                 movementNodes.Add(child.gameObject);
             }
         }

@@ -41,7 +41,7 @@ public class ExplosionLight : MonoBehaviour
         float currentTime = 0f;
         while (currentTime < duration)
         {
-            Debug.Log(light.range);
+            // Debug.Log(light.range);
             light.range = Mathf.Lerp(0, 5, currentTime / duration);
             light.intensity = Mathf.Lerp(0, 40, currentTime / duration);
             currentTime += Time.deltaTime;
