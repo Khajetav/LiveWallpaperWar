@@ -4,6 +4,7 @@ public class OnTouchTrigger : MonoBehaviour
 {
     public GameObject objectToDrop;
     public DeathCounter death;
+
     void Update()
     {
         // Check if the screen is touched
