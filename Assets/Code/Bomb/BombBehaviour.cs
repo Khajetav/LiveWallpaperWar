@@ -5,29 +5,6 @@ using UnityEngine.Events;
 public class BombBehaviour : MonoBehaviour
 {
     public UnityEvent<Vector3> OnExplosion;
-    void Start()
-    {
-        // Find the BombManager object in the scene
-        GameObject bombManager = GameObject.Find("BombManager");
-        if (bombManager != null)
-        {
-            // Get the ExplosionLight component from the BombManager
-            ExplosionLight explosionLight = bombManager.GetComponent<ExplosionLight>();
-            if (explosionLight != null)
-            {
-                // If not null, add the CreateAnExplosion method to the UnityEvent
-                OnExplosion.AddListener(explosionLight.CreateAnExplosion);
-            }
-            else
-            {
-                Debug.LogError("ExplosionLight component not found on BombManager.");
-            }
-        }
-        else
-        {
-            Debug.LogError("BombManager object not found.");
-        }
-    }
 
     public void DroppingTheBomb(Vector2 touchCoordinates)
     {

@@ -3,7 +3,6 @@ using UnityEngine;
 public class OnTouchTrigger : MonoBehaviour
 {
     public GameObject objectToDrop;
-    public GameObject LightExplosionObject;
     void Update()
     {
         // Check if the screen is touched
@@ -20,6 +19,7 @@ public class OnTouchTrigger : MonoBehaviour
 
             // Pass the position to the DroppingTheBomb method
             newObject.GetComponent<BombBehaviour>().DroppingTheBomb(worldPosition);
+            newObject.GetComponent<BombBehaviour>().OnExplosion.AddListener(gameObject.GetComponent<ExplosionLight>().CreateAnExplosion);
         }
     }
 }
