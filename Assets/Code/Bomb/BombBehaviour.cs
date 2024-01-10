@@ -53,7 +53,6 @@ public class BombBehaviour : MonoBehaviour
             // Yield until the next frame.
             yield return null;
         };
-        Debug.Log("Invoking OnExplosion event");
         OnExplosion.Invoke(newPosition);
         Destroy(gameObject);
     }

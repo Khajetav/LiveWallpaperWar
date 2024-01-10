@@ -7,7 +7,6 @@ public class ExplosionLight : MonoBehaviour
 
     public void CreateAnExplosion(Vector3 explosionPosition)
     {
-        Debug.Log("Invoked");
         GameObject lightGameObject = new GameObject("LightExplosion");
         explosionPosition.z = bombExplosionHeight;
         lightGameObject.transform.position = explosionPosition;
