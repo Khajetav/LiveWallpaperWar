@@ -7,6 +7,7 @@ TagManager:
   - NodeTank
   - NodeSoldier
   - Bomb
+  - Soldier
   layers:
   - Default
   - TransparentFX

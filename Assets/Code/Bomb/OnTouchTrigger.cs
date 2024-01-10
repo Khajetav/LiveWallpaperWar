@@ -3,6 +3,7 @@ using UnityEngine;
 public class OnTouchTrigger : MonoBehaviour
 {
     public GameObject objectToDrop;
+    public DeathCounter death;
     void Update()
     {
         // Check if the screen is touched
@@ -20,6 +21,15 @@ public class OnTouchTrigger : MonoBehaviour
             // Pass the position to the DroppingTheBomb method
             newObject.GetComponent<BombBehaviour>().DroppingTheBomb(worldPosition);
             newObject.GetComponent<BombBehaviour>().OnExplosion.AddListener(gameObject.GetComponent<ExplosionLight>().CreateAnExplosion);
+            newObject.GetComponent<BombBehaviour>().death = death;
         }
+    }
+
+    public void DropTheBomb()
+    {
+        GameObject newObject = Instantiate(objectToDrop);
+        newObject.GetComponent<BombBehaviour>().DroppingTheBomb(new Vector3(0,3,-9));
+        newObject.GetComponent<BombBehaviour>().OnExplosion.AddListener(gameObject.GetComponent<ExplosionLight>().CreateAnExplosion);
+        newObject.GetComponent<BombBehaviour>().death = death;
     }
 }

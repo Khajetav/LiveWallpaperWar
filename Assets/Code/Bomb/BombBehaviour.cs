@@ -5,6 +5,7 @@ using UnityEngine.Events;
 public class BombBehaviour : MonoBehaviour
 {
     public UnityEvent<Vector3> OnExplosion;
+    public DeathCounter death;
 
     public void DroppingTheBomb(Vector2 touchCoordinates)
     {
@@ -36,9 +37,10 @@ public class BombBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Soldier")
         {
             // Debug.Log(other.gameObject.name);
+            death.OnKill(1);
             Destroy(other.gameObject);
         }
     }
