@@ -21,4 +21,9 @@ public class GetAllMovementNodes : MonoBehaviour
             }
         }
     }
+
+    public void AssignNodeParent(GameObject node)
+    {
+        nodeParent = node;
+    }
 }

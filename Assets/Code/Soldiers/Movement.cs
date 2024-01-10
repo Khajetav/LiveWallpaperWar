@@ -11,8 +11,7 @@ public class Movement : MonoBehaviour
     private int nodeIndex = 0;
     private void Awake()
     {
-        movementNodeManager = GetComponent<GetAllMovementNodes>();
-        movementNodeManager.LoadAllNodes();
+        
     }
 
     public void LoadNextNode()
@@ -32,14 +31,13 @@ public class Movement : MonoBehaviour
     }
     void Start()
     {
+        movementNodeManager = GetComponent<GetAllMovementNodes>();
+        movementNodeManager.LoadAllNodes();
         // Grab the first node from the movementNodeManager's movementNodes list
         if (movementNodeManager.movementNodes.Count > 0)
         {
             currentNode = movementNodeManager.movementNodes[0];
             movementCoroutine = StartCoroutine(MoveTowardsNode());
-        }
-        else
-        {
         }
     }
 

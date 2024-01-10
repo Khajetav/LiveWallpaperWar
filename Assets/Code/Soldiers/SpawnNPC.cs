@@ -16,10 +16,12 @@ public class SpawnNPC : MonoBehaviour
 
     void ReleaseNPC()
     {
-        Instantiate(soldierPrefab, npcSpawnPoint);
+        GameObject newGameObject = Instantiate(soldierPrefab);
+        newGameObject.GetComponent<GetAllMovementNodes>().AssignNodeParent(parentNodeList[rotation]);
+        newGameObject.transform.position = parentNodeList[rotation].transform.position;
 
-
-        if (parentNodeList.Count  rotation)
+        rotation++;
+        if (parentNodeList.Count <= rotation)
             rotation = 0;
     }
 }
