@@ -6,6 +6,7 @@ TagManager:
   tags:
   - NodeTank
   - NodeSoldier
+  - Bomb
   layers:
   - Default
   - TransparentFX

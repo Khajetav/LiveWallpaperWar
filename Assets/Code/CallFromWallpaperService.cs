@@ -7,10 +7,17 @@ using UnityEngine;
 public class CallFromWallpaperService : MonoBehaviour
 {
     public CanvasGroup mainCanvasGroup;
+    public OnTouchTrigger bombTouchEvent;
 
     private Coroutine coroutineOnFadeOut;
     private Coroutine coroutineOnFadeIn;
 
+    private void Start()
+    {
+#if UNITY_EDITOR
+        bombTouchEvent.enabled = true;
+#endif
+    }
     // Invoked by the Wallpaper Service upon visibility changes.
     // Receives a boolean value indicating the user's current screen.
     public void OnVisibilityChange(string boolean)
@@ -21,6 +28,7 @@ public class CallFromWallpaperService : MonoBehaviour
             if (coroutineOnFadeIn != null)
                 StopCoroutine(coroutineOnFadeIn);
             coroutineOnFadeOut = StartCoroutine(DoFadeOut());
+            bombTouchEvent.enabled = true;
         }
         else
         {
@@ -29,6 +37,7 @@ public class CallFromWallpaperService : MonoBehaviour
             mainCanvasGroup.gameObject.SetActive(true);
             mainCanvasGroup.alpha = 0;
             coroutineOnFadeIn = StartCoroutine(DoFadeIn());
+            bombTouchEvent.enabled = false;
         }
     }
 
