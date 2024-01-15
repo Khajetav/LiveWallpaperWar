@@ -75,3 +75,8 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Assets/Resources/BillingMode.json.meta
+Assets/Resources/BillingMode.json
+Assets/Scripts/UnityPurchasing/generated/GooglePlayTangle.cs
+Assets/Scripts/UnityPurchasing/generated/GooglePlayTangle.cs.meta
+ProjectSettings/ProjectSettings.asset

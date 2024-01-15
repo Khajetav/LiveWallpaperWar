@@ -12,16 +12,20 @@ public class CallFromWallpaperService : MonoBehaviour
     private Coroutine coroutineOnFadeOut;
     private Coroutine coroutineOnFadeIn;
 
-    private void Start()
+    public bool enableBomb = false;
+
+    private void Update()
     {
 #if UNITY_EDITOR
-        bombTouchEvent.enabled = true;
+        bombTouchEvent.enabled = enableBomb;
 #endif
     }
+
     // Invoked by the Wallpaper Service upon visibility changes.
     // Receives a boolean value indicating the user's current screen.
     public void OnVisibilityChange(string boolean)
     {
+
         // If the condition is true, it means the user is in a desktop; if false, the user is in an application.
         if (boolean == "true")
         {

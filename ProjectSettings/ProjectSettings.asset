@@ -682,7 +682,8 @@ PlayerSettings:
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Purchasing: 1
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -707,7 +708,7 @@ PlayerSettings:
   cloudProjectId: d0d599fe-ed94-4168-94c3-471f270604d4
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: LiveWallpaperWar 2024-01-08_09-23-39
+  projectName: Live Wallpaper - War
   organizationId: kavukavastudios
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
