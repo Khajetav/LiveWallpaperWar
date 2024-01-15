@@ -1,4 +1,0 @@
-repository "LiveWallpaperWar@KavuKava_Studios@cloud"
-  path "/"
-    br "/main"
-    co "/main"
