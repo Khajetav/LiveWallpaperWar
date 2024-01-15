@@ -19,7 +19,7 @@ public class BombBehaviour : MonoBehaviour
     private IEnumerator DroppingToTheGround()
     {
         // Debug.Log("BOOOOOOOOMB!!!!!");
-        float speed = 5.0f;
+        float speed = 15.0f;
         Vector3 newPosition = transform.position;
         // Continue the loop until the z position is approximately 0 and scale is close to 0
         while (Mathf.Abs(transform.position.z) > 0.001f)

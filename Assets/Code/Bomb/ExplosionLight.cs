@@ -4,6 +4,11 @@ using UnityEngine;
 public class ExplosionLight : MonoBehaviour
 {
     public float bombExplosionHeight = -0.05f;
+    public float bombExplosionRange = 10f;
+    public float bombExplosionIntensity = 100f;
+    public float bombExplosionStartDuration = 0.2f;
+    public float bombExplosionEndDuration = 2f;
+    public LightShadows lightShadows;
 
     public void CreateAnExplosion(Vector3 explosionPosition)
     {
@@ -17,7 +22,7 @@ public class ExplosionLight : MonoBehaviour
         lightComp.renderMode = LightRenderMode.Auto;
         lightComp.range = 0f;
         lightComp.intensity = 0f;
-        lightComp.shadows = LightShadows.Hard;
+        lightComp.shadows = lightShadows;
         lightComp.shadowBias = 0f;  
         lightComp.shadowNormalBias = 0.4f;  
         lightComp.shadowNearPlane = 0.2f;
@@ -37,28 +42,28 @@ public class ExplosionLight : MonoBehaviour
     private IEnumerator AnimateExplosionStart(Light light)
     {
         // Increase range from 0 to 10 in 0.3 seconds
-        float duration = 0.2f;
+        float duration = bombExplosionStartDuration;
         float currentTime = 0f;
         while (currentTime < duration)
         {
             // Debug.Log(light.range);
-            light.range = Mathf.Lerp(0, 10, currentTime / duration);
-            light.intensity = Mathf.Lerp(0, 100, currentTime / duration);
+            light.range = Mathf.Lerp(0, bombExplosionRange, currentTime / duration);
+            light.intensity = Mathf.Lerp(0, bombExplosionIntensity, currentTime / duration);
             currentTime += Time.deltaTime;
             yield return null;
         }
-        light.range = 5f;
+        light.range = bombExplosionRange;
         StartCoroutine(AnimateExplosionEnd(light));
     }
     private IEnumerator AnimateExplosionEnd(Light light)
     {
         // Decrease range and intensity over 2 seconds
-        float duration = 2f;
+        float duration = bombExplosionEndDuration;
         float currentTime = 0f;
         while (currentTime < duration)
         {
-            light.range = Mathf.Lerp(10, 0, currentTime / duration);
-            light.intensity = Mathf.Lerp(100, 0, currentTime / duration);
+            light.range = Mathf.Lerp(bombExplosionRange, 0, currentTime / duration);
+            light.intensity = Mathf.Lerp(bombExplosionIntensity, 0, currentTime / duration);
             currentTime += Time.deltaTime;
             yield return null;
         }
