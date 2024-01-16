@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class FocusManager : MonoBehaviour
 {
+    #if !UNITY_EDITOR
     void OnApplicationFocus(bool hasFocus)
     {
         if (!hasFocus)
@@ -24,5 +25,6 @@ public class FocusManager : MonoBehaviour
                 behaviour.enabled = true;
             }
         }
-    }
+    }  
+    #endif
 }

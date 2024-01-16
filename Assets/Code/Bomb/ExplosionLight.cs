@@ -27,8 +27,9 @@ public class ExplosionLight : MonoBehaviour
         lightComp.shadowNormalBias = 0.4f;  
         lightComp.shadowNearPlane = 0.2f;
 
+        string colorHex = PlayerPrefs.GetString("bombColour", "#FFE1B9");
         Color lightColor;
-        if (ColorUtility.TryParseHtmlString("#FFE1B9", out lightColor))
+        if (ColorUtility.TryParseHtmlString(colorHex, out lightColor))
         {
             lightComp.color = lightColor;
         }

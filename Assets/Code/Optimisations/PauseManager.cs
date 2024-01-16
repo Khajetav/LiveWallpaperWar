@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PauseManager : MonoBehaviour
 {
+    #if !UNITY_EDITOR
     void OnApplicationPause(bool isPaused)
     {
         if (isPaused)
@@ -25,4 +26,5 @@ public class PauseManager : MonoBehaviour
             }
         }
     }
+    #endif
 }
