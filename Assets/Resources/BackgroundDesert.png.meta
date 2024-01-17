@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fad174e86f82d144ba6d57d5e894f069
+guid: 9c25d21f80a55a542954e006fc51c999
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7850026957550372343
-    second: Roof_0
+      213: -2207533668906070756
+    second: BackgroundDesert_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Roof_0
+      name: BackgroundDesert_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 250
-        height: 250
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 90a38f5c21a1f0390800000000000000
-      internalID: -7850026957550372343
+      spriteID: c1d832bf2d34d51e0800000000000000
+      internalID: -2207533668906070756
       vertices: []
       indices: 
       edges: []
@@ -172,7 +172,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Roof_0: -7850026957550372343
+      BackgroundDesert_0: -2207533668906070756
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

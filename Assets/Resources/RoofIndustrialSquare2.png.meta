@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fad174e86f82d144ba6d57d5e894f069
+guid: e7d357327e57559468fdc9310701ea2e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7850026957550372343
-    second: Roof_0
+      213: -4187422494699694182
+    second: RoofIndustrialSquare2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Roof_0
+      name: RoofIndustrialSquare2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 90a38f5c21a1f0390800000000000000
-      internalID: -7850026957550372343
+      spriteID: a97d1fe4d6943e5c0800000000000000
+      internalID: -4187422494699694182
       vertices: []
       indices: 
       edges: []
@@ -172,7 +172,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Roof_0: -7850026957550372343
+      RoofIndustrialSquare2_0: -4187422494699694182
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
