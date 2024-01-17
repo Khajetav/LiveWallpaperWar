@@ -3,8 +3,6 @@ using static WeaponManager;
 
 public class OnTouchTrigger : MonoBehaviour
 {
-
-    public GameObject objectToDrop;
     public DeathCounter death;
     public WeaponManager weaponManager;
 
