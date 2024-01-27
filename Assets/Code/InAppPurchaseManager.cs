@@ -45,9 +45,16 @@ public class InAppPurchaseManager : MonoBehaviour
 
     public void OnPurchaseFailed(Product product, PurchaseFailureDescription failureReason)
     {
-        Debug.Log(product.definition.id + " failed. " + failureReason.message);
-
+        if (product != null)
+        {
+            Debug.Log(product.definition.id + " failed. " + failureReason.message);
+        }
+        else
+        {
+            Debug.Log("Purchase failed and the product is null. " + failureReason.message);
+        }
     }
+
 
     public void OnTransactionsRestored(bool success, string? error)
     {

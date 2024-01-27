@@ -10341,7 +10341,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   premiumCanvas: {fileID: 1158763275}
   permiumHolderGameObject: {fileID: 1567728110}
-  environment: production
 --- !u!1 &2051688847
 GameObject:
   m_ObjectHideFlags: 0
