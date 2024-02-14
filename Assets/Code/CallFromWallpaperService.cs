@@ -25,14 +25,13 @@ public class CallFromWallpaperService : MonoBehaviour
     // Receives a boolean value indicating the user's current screen.
     public void OnVisibilityChange(string boolean)
     {
-
         // If the condition is true, it means the user is in a desktop; if false, the user is in an application.
         if (boolean == "true")
         {
             if (coroutineOnFadeIn != null)
                 StopCoroutine(coroutineOnFadeIn);
             coroutineOnFadeOut = StartCoroutine(DoFadeOut());
-            bombTouchEvent.enabled = true;
+            bombTouchEvent.canInteract = true;
         }
         else
         {
@@ -41,7 +40,7 @@ public class CallFromWallpaperService : MonoBehaviour
             mainCanvasGroup.gameObject.SetActive(true);
             mainCanvasGroup.alpha = 0;
             coroutineOnFadeIn = StartCoroutine(DoFadeIn());
-            bombTouchEvent.enabled = false;
+            bombTouchEvent.canInteract = false;
         }
     }
 

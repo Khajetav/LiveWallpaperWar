@@ -14,27 +14,12 @@ public class InAppPurchaseManager : MonoBehaviour
     public CanvasGroup premiumCanvas;
     public GameObject permiumHolderGameObject;
 
-    public string environment = "production";
 
-    async void Start()
-    {
-        try
-        {
-            var options = new InitializationOptions()
-                .SetEnvironmentName(environment);
-
-            await UnityServices.InitializeAsync(options);
-        }
-        catch (Exception exception)
-        {
-            Debug.Log("Initialize error: " + exception.Message);
-        }
-    }
 
     public void OnPurchaseComplete(Product product)
     {
         Debug.Log("Purchase completed: "+ product.definition.id);
-        // To change test image color for green
+
         if (product.definition.id == premiumItem)
         {
             permiumHolderGameObject.GetComponent<Button>().enabled = false;

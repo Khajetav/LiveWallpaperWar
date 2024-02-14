@@ -1929,6 +1929,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   death: {fileID: 1880165046}
   weaponManager: {fileID: 440879865}
+  canInteract: 0
 --- !u!114 &440879864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9030,8 +9031,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1695950918}
   m_HandleRect: {fileID: 1695950917}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.6340462
+  m_Value: 1.0000002
+  m_Size: 0.63404626
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -10291,7 +10292,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2025342181}
   - component: {fileID: 2025342183}
-  - component: {fileID: 2025342182}
   m_Layer: 0
   m_Name: InAppPurchaseManager
   m_TagString: Untagged
@@ -10314,19 +10314,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1748247713}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2025342182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2025342180}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d23f3339eb2130746b1e7e873368fe92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  environment: production
 --- !u!114 &2025342183
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,18 +6,43 @@ public class OnTouchTrigger : MonoBehaviour
     public DeathCounter death;
     public WeaponManager weaponManager;
 
+    public bool canInteract = false;
+
+    private bool isTouching = false;
+    private Vector2 touchStartPosition;
+    private float tapThreshold = 0.5f;
+
     void Update()
     {
-        // Check if the screen is touched
-        if (Input.GetMouseButtonDown(0))
+        // Check for a touch
+        if (Input.touchCount > 0)
         {
-            if (weaponManager.selectedWeapon == WeaponType.Bomb)
-            {
-                DropTheBomb();
-            }
-            else if (weaponManager.selectedWeapon == WeaponType.Bullet)
-            {
+            Touch touch = Input.GetTouch(0);
 
+            switch (touch.phase)
+            {
+                case TouchPhase.Began:
+                    // Record start position and mark as touching
+                    touchStartPosition = touch.position;
+                    isTouching = true;
+                    break;
+
+                case TouchPhase.Ended:
+                    if (isTouching && Vector2.Distance(touchStartPosition, touch.position) < tapThreshold)
+                    {
+                        // It's a tap, perform your action
+                        if (canInteract && weaponManager.selectedWeapon == WeaponType.Bomb)
+                        {
+                            DropTheBomb();
+                        }
+                        else if (canInteract && weaponManager.selectedWeapon == WeaponType.Bullet)
+                        {
+                            // Perform action for bullet
+                        }
+                    }
+                    // Reset the touching flag
+                    isTouching = false;
+                    break;
             }
         }
     }
